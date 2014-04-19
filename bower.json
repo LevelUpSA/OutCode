@@ -1,0 +1,10 @@
+{
+  "name": "note-to-angular",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.2.16",
+    "angular-mocks": "1.2.16",
+    "jasmine": "2.0",
+    "todomvc-common": "~0.1.9"
+  }
+}
