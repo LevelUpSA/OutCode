@@ -1,9 +1,12 @@
+// Required files for the web server
+var index = require('./server/index')
+
+
 var express = require('express');
 var app = express();
 
-app.get('/', function(req, res){
-  res.send('hello world');
-});
+
+app.get('/', index.index);
 
 app.get('/test', function(req, res) {
 
