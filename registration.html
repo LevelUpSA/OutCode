@@ -1,38 +1,118 @@
 <html>
 <head>
-<title>registration</title>
+<title>Registration</title>
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/layout.css">
 </head>
 
 <body>
+	    <div id="content-wrap">
 
-<table border="1" style="width:300px">
+      <!-- Header
+      ================================================== -->
+      <header class="container">
+
+         <hgroup>
+            <h1><a href="index.html">OutCode</a></h1>
+         </hgroup>
+
+
+         <nav id="nav-wrap" class="cf">
+            <ul id="menu"> 
+        	<li><a href="contact.html">Contact</a></li>
+        	<li class="current"><a href="registration.html">Register</a></li>
+        	<li ><a href="Login/login.html">Login</a></li>
+            </ul> <!-- end #menu -->
+         </nav>
+        
+	</header>
+
+	<div class="container">
+        	<span class="description">
+				<h3>How to register on Outcode: </h3>
+				<p> Fill in all the requisites then click "register".</p>
+			</span>
+		</div>
+
+ 	</div>
+
+<article class="container" id="latest-article">	
+	
+<table class="register">
 <tr>
-	<td align = "center" ><h2>Name</h2></td>
-	<td align = "center"><input type="text"></td>
+	<td ><label>Name :</label></td>
+	<td ><input type="text"></td>
 </tr>	
-
+<!--  -->
 <tr>
-	<td align = "center"> <h2>Username</h5></td>
-	<td align = "center"> <input type="text"></td>
+	<td > <label>Username :</label></td>
+	<td > <input type="text"></td>
+</tr>
+<!--  -->
+<tr>
+	<td ><label>Password :</label></td>
+	<td ><input type="text"></td>
+</tr>
+<!--  -->
+<tr>
+	<td ><label>Confirm Password :</label></td>
+	<td ><input type="text"></td>
 </tr>
 
+<!--  -->
 <tr>
-	<td align = "center">Email</td>
-	<td align = "center"><input type="text"></td>
+	<td > <label> e-mail Addresss: </hlabel</td>
+	<td ><input type="text"></td>
 </tr>	
+<!--  -->
+<tr>
+	<td > <label> Type of User : </label></td>
+	<td>
+	<input type="radio" name="Volunteer" value="Volunteer" >1. Volunteer.<br>
+	<input type="radio" name="Organiser" value="Organiser" >2. Organiser.<br>
+	</td>
+	
+</tr>
+<!--  -->
+<tr>
 
-<tr><td align = "center">User Type</td><td align = "centre">
+	<td>
+	<p1> 
+	Do you agree with our full terms and conditions ? To read them <a href="#"><i>click here.</i></a> 
+	</p1>
 
-<form action="">
-<input type="radio" name="sex" value="Volunteer">Volunteer<br>
-<input type="radio" name="sex" value="Organiser">Organiser<br>
-</form>
+	</td>	
+	<td>
+	<select>
+	<option type="text" name="Volunteer" value="Disgree" >No.</option>
+	<option type="text" name="Volunteer" value="Agree" >Yes.</option>
+	</select>
+	</td>
+</tr>
 
-</td></tr>	
-<tr><td><input type="submit"> </input></td></tr>
+<!--  -->
+<tr >
+	<td></td>
+	<td><input padding-right="90px" type="submit" value="Register"> 
+	</td>
+</tr>
 
+</table>
+</article>
 
+<div id="content-wrap1">
+<footer class="container">
+      <div class="grid3 first">
+         <h3>social</h3>
+           <ul class="social-links cf">
+           <li class="twitter"><a href="#">Twitter</a></li>
+           <li class="facebook"><a href="#">Facebook</a></li>
+           <li class="google"><a href="#">Google</a></li>
+           <li class="instagram"><a href="#">Instagram</a></li>
+           <li class="dribble"><a href="#">Dribble</a></li>
+         </ul>
+      </div>
+   </footer>
+</div>
 </body>
 </html>

@@ -1,6 +1,4 @@
-      <input type="text" ng-model="title" id="title"/>
-      <h2>{{title}}</h2>
-
+      
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><htmlll class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><htmlll class="ie ie8" lang="en"> <![endif]-->
@@ -8,17 +6,17 @@
 <html lang="en" ng-app> 
 <!--<![endif]-->
 <head>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="js/note.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="js/note.js"></script>
   
   
    <!--- Bmetadata
    ================================================== -->
-  <meta charset="utf-8">
-  <title>OutCode</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+<meta charset="utf-8">
+<title>OutCode</title>
+<meta name="description" content="">
+<meta name="author" content="">
 
   <!-- 
    ================================================== -->
@@ -28,7 +26,7 @@
   <!--[if lt IE 9]>
     <script src="http://htmlll5shim.googlecode.com/svn/trunk/htmlll5.js"></script>
   <![endif]-->
-<style>
+<!--<style>
 .description{
 font-size:15px;
 color:#888;
@@ -40,9 +38,10 @@ display:block;
 font-size:15px;
 color:#888;
 }
-</style>
+</style>-->
 
 </head>
+
 
 <body>
 
@@ -53,40 +52,54 @@ color:#888;
       <header class="container">
 
          <hgroup>
-            <h1><a href="index.htmll">OutCode</a></h1>
+            <h1 >
+              <a href="index.html">OutCode</a>
+            </h1>
          </hgroup>
-
 
          <nav id="nav-wrap" class="cf">
 
-            <ul id="menu"> 
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Register</a></li>
-              <li class="current"><a href="index.htmll">Login</a></li>
+         <ul id="menu"> 
+         <li><a href="#">Contact</a></li>
+         <li><a href="registration.html">Register</a></li>
+         <li><a href="Login/login.html">Login</a></li>
             </ul> <!-- end #menu -->
 
          </nav>
-
       </header>
+        <div class="container">
+         <h2><a> Welcome To Outcode. </a></h2>
+          <span class="description">
+              <h3>Ever wanted to take part in a Project for the heck of IT ?</h3>
+
+              <p>Here at Outcode we chat all night on whatsapp and forget chargers unattended at thoughtworks.
+              LOL This is just short site descreiption people anyone can add anything here.</p>
+  
+              <p>Please feel free to addd something more conducvie to the product owner. </p>
+              
+              <p><i>Written by the Gabriel</i></p>
+
+          </span>
+        </div>
+      
+      </div>
 
       <!-- latest article
       ================================================== -->
-      <article id="latest-article" class="container">
 
-         <h2><a href="#">Project X</a></h2>
+      <article id="latest-article" class="container1">
+
+         <h2 class="backing"><a href="#">Project X</a></h2>
      <span class="description">
      <h3>Description</h3>
     
      </span>
 
          <div class="dcontent cf">
-            <p>Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.
-      Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.
-      Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works
-      Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.</p>
+            <p>Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works. Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.</p>
 
-            <p class="continue cf"><a class="button" href="#">Continue Reading</a></p>
-<span class="description">
+    <p class="continue cf"><a class="button" href="#">Continue Reading</a></p>
+    <span class="description">
      <ul class="details">
      <li>Start Date: 24 April 2014</li>
      <li>Project Status: Implementation</li>
@@ -106,11 +119,10 @@ color:#888;
 
             </div>
 
-         </div>
 
       </article>
 
-      <!-- more articles
+      <!-- commentry
       ================================================== -->
       <div id="more-articles" class="container">
 
@@ -124,38 +136,30 @@ color:#888;
             <div class="grid8 a-right">
 
                <p>Thought Works, Thought Works, Thought Works.]Thought Works, Thought Works, Thought Works.
-         Thought Works, Thought Works, Thought Works.
-         Thought Works, Thought Works, Thought Works.
-         Thought Works, Thought Works, Thought Works.
-         Thought Works, Thought Works, Thought Works.
-         Thought Works, Thought Works, Thought Works.
-         Thought Works, Thought Works, Thought Works.
-         Thought Works, Thought Works, Thought Works.<a href="#"> Read More...</a> </p>
+         Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works. Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works. Thought Works, Thought Works, Thought Works.
+         <a href="#"> Read More...</a> </p>
 
                <div class="comments">
                   <a href="#" title="comment on...">11</a>
                </div>
-
             </div>
-
          </article>
 
         </div>
-      <article id="latest-article" class="container">
 
-         <h2><a href="#">Project Y</a></h2>
-     <span class="description">
-     <h3>Description</h3>
-    
+            <!-- next articles
+      ================================================== -->
+  
+      <article id="latest-article" class="container1">
+     <h2 class="backing"><a href="#">Project Y</a></h2>
+      <span class="description">
+       <h3>Description</h3>
      </span>
 
          <div class="dcontent cf">
-            <p>Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.
-      Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.
-      Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works
-      Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.</p>
-
+            <p>Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works. Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.Thought Works, Thought Works, Thought Works.</p>
             <p class="continue cf"><a class="button" href="#">Continue Reading</a></p>
+
 <span class="description">
      <ul class="details">
      <li>Start Date: 28 April 2014</li>
@@ -180,7 +184,7 @@ color:#888;
 
       </article>
 
-      <!-- more articles
+      <!-- Comments
       ================================================== -->
       <div id="more-articles" class="container">
 
@@ -223,10 +227,11 @@ color:#888;
             </div>
 
             <div class="grid8 a-right">
-               <input type="text" id="regularInput">
+               <!-- <input type="text" id="regularInput"> -->
+               <input type="text" ng-model="title" id="title"/>
                <button type="submit">GO</button>
             </div>
-
+            <h2>{{title}}</h2>
          </form>
       </div>
 
@@ -234,13 +239,10 @@ color:#888;
 
    <!-- footer
    ================================================== -->
+   <div id="content-wrap1">
    <footer class="container">
-
       <div class="grid3 first">
-
-        
-
-         <h3>social</h3>
+        <h3>social</h3>
 
             <ul class="social-links cf">
            <li class="twitter"><a href="#">Twitter</a></li>
@@ -252,9 +254,7 @@ color:#888;
 
       </div>
 
-      
-
    </footer>
+   <div>
 </body>
-
 </html>

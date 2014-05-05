@@ -17,4 +17,4 @@ app.get('/test', function(req, res) {
 
 app.use(express.static(__dirname + '/'));
 
-app.listen(3000);
+app.listen(6000);

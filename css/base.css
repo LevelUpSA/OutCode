@@ -10,15 +10,14 @@
 
 
 
-html, body, div, span, object, iframe,
+html, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+b, i, dl, dt, dd, ol, ul, li,
+tbody, fieldset, form, label, legend,
+caption, tfoot, thead, tr, th, 
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
@@ -27,7 +26,7 @@ time, mark, audio, video {
    border: 0;
    outline: 0;
    font-size: 100%;
-   vertical-align: baseline;
+   /*vertical-align: baseline;*/
    background: transparent;
 }
 
@@ -46,6 +45,7 @@ audio:not([controls]) {
    display: none;
    height: 0;
 }
+
 
 [hidden] { display: none; }
 
@@ -86,11 +86,61 @@ abbr[title], dfn[title] {
    cursor: help;
 }
 
-table {
+.register {
    border-collapse: collapse;
    border-spacing: 0;
+   position: relative;
+   font-family: monospace, serif;
+   font-size: 1em;
+   background: #fff;
+   width: 40em;
+   height: 40em; 
+   margin-top: 54px;
+   padding-bottom: 5px;
+   border-bottom: 3px solid #e4e3e3;
+   border-top: 4px solid #e5e2e3;
+   border-style: 80%;
 }
 
+.login {
+   border-collapse: collapse;
+   border-spacing: 0;
+   position: relative;
+   font-family: monospace, serif;
+   font-size: 1em;
+   background: #fff;
+   width: 30em;
+   height: 15em; 
+   margin-top: 54px;
+   padding-bottom: 5px;
+   border-bottom: 3px solid #e4e3e3;
+   border-top: 4px solid #e5e2e3;
+   border-style: 80%;
+
+
+}
+
+.backing{
+   background: #fff url(../images/king.jpg);
+}
+
+td {
+   padding-left: 25px;
+   padding-right: 25px;
+   font-size: 100%;
+}
+
+p1 {
+   font-size: 12px;
+}
+
+td:hover > label {color: #66B2ff;}
+/*td:hover > input .name */
+
+
+table {
+   padding-left: 250px;
+}
 
 /* ------------------------------------------------------------------ */
 /* c. Default Styles
@@ -137,6 +187,10 @@ h6 { font-size: 14px; line-height: 30px; }
 p { margin: 0 0 24px 0; }
 p img { margin: 0; }
 p.lead { font-size: 20px; line-height: 36px; }
+
+.simple{
+  font-size: 9px;  
+}
 
 em { font-style: italic; }
 strong { font-weight: bold; }
@@ -381,32 +435,31 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-   height: 42px;
-   background: #3695c6;
-   border: 1px solid #1C89C4;
+  height: 42px;
+  background: #3695c6;
+  border: 1px solid #1C89C4;
 	display: inline-block;
-
+  width: 250px;
 	font-family: "Open-sans", Sans-serif;
-   font-size: 14px;
+  font-size: 14px;
 	font-weight: bold;
 	text-decoration: none;
-   letter-spacing: 0;
-   color: #fff;
-   line-height: 42px;
+  letter-spacing: 0;
+  color: #fff;
+  line-height: 42px;
 
 	cursor: pointer;
-   padding-left: 15px;
-   padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 	margin-bottom: 18px;
 
-    -webkit-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
 	-ms-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 
-   text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-
+   text-shadow: 0 -1px 0 rgba(0,0,0,0.3); 
    box-shadow: 0px 1px 2px rgba(0,0,0,0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
 }
 
@@ -529,6 +582,18 @@ legend span {
    width: 956px;
    margin: 0 auto;
    padding: 0;
+   position: center;
+
+}
+
+.container1{
+   width: 956px;
+   margin: 0 auto;
+   padding: 0;
+   position: center;
+   background: #fff url(../images/zorin.png);
+   border: solid #ddd; border-width: 3px 0 0;
+
 }
 
 /* container clearing */
