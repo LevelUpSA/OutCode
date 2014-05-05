@@ -15,6 +15,8 @@ app.get('/test', function(req, res) {
     res.send(parsed_json)
 });
 
+
+
 app.use(express.static(__dirname + '/'));
 
-app.listen(6000);
+app.listen(4000);
