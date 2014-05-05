@@ -4,6 +4,10 @@
 <title>Registration</title>
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/layout.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/note.js"></script>
+
 </head>
 
 <body>
@@ -39,7 +43,7 @@
 
 <article class="container" id="latest-article">	
 	
-<table class="register">
+<table class="register" id="reg">
 <tr>
 	<td ><label>Name :</label></td>
 	<td ><input type="text" title="your first name [eg. John]"></td>
@@ -70,7 +74,7 @@
 	<td > <label> Type of User : </label></td>
 	<td>
 	<input type="radio" name="clicked" value="Volunteer" title="If you are just volunteering to take part">1. Volunteer.<br>
-	<input type="radio" name="clicked" value="Organiser" title="If you have a product that you would like for us to recruit for and advertise for your NGO/NPO.">2. Organiser.<br>
+	<input type="radio" name="clicked" value="Organiser" title="If you have a product that you would like for us to recruit for and advertise for your NGO/NPO.">2. Organiser.</a><br>
 	</td>
 	
 </tr>
@@ -91,6 +95,12 @@
 	</td>
 </tr>
 
+<!--  -->
+<tr class="hiddenColumn" id="Organised">
+</tr>	
+
+<tr class="hiddenColumn" id="Organised">
+</tr>
 <!--  -->
 <tr >
 	<td></td>
@@ -115,5 +125,33 @@
       </div>
    </footer>
 </div>
+<script type="text/Javascript">
+
+ // alert('jQuery ' + jQuery.fn.jquery);
+ 
+ $('.hiddenColumn').hide();
+
+$('input[type=radio]').click(function() {
+     var $nextTR = $(this).closest('tr').next('tr').next('tr');
+     var $nextTRQ = $(this).closest('tr').next('tr').next('tr').next('tr');
+     
+     if (this.value == 'Organiser') {
+       $nextTR
+ .html('<td class="left"><label>Organisation Name :</label><br/></td><td><input type="text" title="Give us the name of your organisation [eg. Outcode]" name="OrganisationName"></td>').show(500);
+       $nextTRQ
+ .html('<td class="left"><label>Organisation Description :</label><br/></td><td><textarea  title="A brief sentence on what your Organisation is about." name="OrganisationDescrption"/></td>').show(450);
+
+} 
+     else if (this.value == 'Volunteer') {
+        $nextTR.hide(500);
+       	$nextTRQ.hide(450); 
+     };
+   });
+
+//var result_style = document.getElementById('Organised').style;
+//result_style.display = 'table-row';
+//
+
+</script>
 </body>
 </html>
