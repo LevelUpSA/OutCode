@@ -10,13 +10,13 @@ app.get('/', index.index);
 
 app.get('/test', function(req, res) {
 
-    response = '{ "name": "Gabriel"}'
-    parsed_json = JSON.parse(response);
-    res.send(parsed_json)
+	response = '{ "name": "Gabriel"}'
+	parsed_json = JSON.parse(response);
+	res.send(parsed_json)
 });
 
 
 
 app.use(express.static(__dirname + '/'));
 
-app.listen(4000);
+app.listen(3000);
