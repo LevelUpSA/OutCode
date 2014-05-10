@@ -7,10 +7,4 @@ angular.module('outcode', ['ngRoute'])
     templateUrl: 'templates/index.html',
     controller: "indexController"
   });
-})
-
-.controller('indexController', function($scope) {
-     
-    $scope.greeting = 'Lebohang is not happy with angular';
-     
 });

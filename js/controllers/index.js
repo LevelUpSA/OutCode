@@ -1,4 +1,5 @@
-angular.module('outcode', [])
+angular.module('outcode')
 
-.controller('indexController', ['$scope', function($scope){
-}])
+.controller('indexController', function($scope){
+  $scope.greeting = "This is lebohang";
+});
