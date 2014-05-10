@@ -1,0 +1,12 @@
+{
+    "name": "OutCode",
+    "version": "0.0.0",
+    "description": "OutCode",
+    "private": true,
+    "dependencies": {
+        "express": "latest",
+        "bower": "latest",
+        "protractor": "latest"
+    },
+    "author": "tD"
+}
