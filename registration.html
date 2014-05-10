@@ -79,6 +79,15 @@
   			</td>
   			
   		</tr>
+
+  		<!--  -->
+  		<tr class="hiddenColumn" id="Organised">
+  		</tr>	
+
+  		<tr class="hiddenColumn" id="Organised">
+  		</tr>
+  		<!--  -->
+
   		<!--  -->
   		<tr>
 
@@ -89,18 +98,11 @@
 
   			</td>	
   			<td>
-  				<input type="radio" name="clicked" value="No" title="I Don't Agree">No &n
+  				<input type="radio" name="clicked" value="No" title="I Don't Agree">No 
   				<input type="radio" name="clicked" value="Yes" title="I Agree"> Yes</a><br>
   			</td>
   		</tr>
 
-  		<!--  -->
-  		<tr class="hiddenColumn" id="Organised">
-  		</tr>	
-
-  		<tr class="hiddenColumn" id="Organised">
-  		</tr>
-  		<!--  -->
   		<tr >
   			<td></td>
   			<td><input padding-right="90px" type="submit" value="Register"> 
@@ -131,8 +133,8 @@
  $('.hiddenColumn').hide();
 
  $('input[type=radio]').click(function() {
- 	var $nextTR = $(this).closest('tr').next('tr').next('tr');
- 	var $nextTRQ = $(this).closest('tr').next('tr').next('tr').next('tr');
+ 	var $nextTR = $(this).closest('tr').next('tr');
+ 	var $nextTRQ = $(this).closest('tr').next('tr').next('tr');
  	
  	if (this.value == 'Organiser') {
  		$nextTR
