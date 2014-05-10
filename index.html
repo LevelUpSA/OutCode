@@ -3,13 +3,15 @@
 <!--[if lt IE 8 ]><htmlll class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><htmlll class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 8)|!(IE)]><!-->
-<html lang="en" ng-app> 
+<html lang="en" ng-app="outcode"> 
 <!--<![endif]-->
 <head>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-  <script type="text/javascript" src="js/note.js"></script>
   <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+
+  <script type="text/javascript" src="js/route.js"></script>
+  <script type="text/javascript" src="js/controller/index.js"></script>
   <link rel="shortcut icon" href="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/matte-blue-and-white-square-icons-alphanumeric/116525-matte-blue-and-white-square-icon-alphanumeric-letter-o.png">
   
    <!--- Bmetadata
@@ -72,6 +74,7 @@ color:#888;
        -->
        <h2><a> Welcome To Outcode. </a></h2>
        
+       <div ng-view></div>
 
        <span class="description">
         <h3>Ever wanted to take part in a Project for the heck of IT ?</h3>
