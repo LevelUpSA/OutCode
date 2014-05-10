@@ -6,5 +6,10 @@ angular.module('outcode', ['ngRoute'])
   .when('/index', {
     templateUrl: 'templates/index.html',
     controller: "indexController"
+  })
+
+  .when('/login', {
+    templateUrl: 'templates/login.html',
+    controller: "loginController"
   });
 });
