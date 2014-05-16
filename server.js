@@ -18,5 +18,5 @@ app.get('/test', function(req, res) {
 
 
 app.use(express.static(__dirname + '/'));
-
-app.listen(4000);
+var port = Number(process.env.PORT || 4000);
+app.listen(port);
