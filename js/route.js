@@ -16,5 +16,9 @@ angular.module('outcode', ['ngRoute'])
   .when('/registration', {
     templateUrl: 'templates/registration.html',
     controller: "registrationController"
+  })
+
+  .otherwise({
+    redirectTo: '/index'
   });
 });
