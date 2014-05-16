@@ -11,5 +11,10 @@ angular.module('outcode', ['ngRoute'])
   .when('/login', {
     templateUrl: 'templates/login.html',
     controller: "loginController"
+  })
+
+  .when('/registration', {
+    templateUrl: 'templates/registration.html',
+    controller: "registrationController"
   });
 });
