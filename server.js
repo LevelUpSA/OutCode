@@ -2,11 +2,12 @@
 var index = require('./server/index')
 var register = require('./server/registration')
 
+var bodyParser = require('body-parser');
 var express = require('express');
 var app = express();
 
-app.use(express.bodyParser());
 
+app.use(bodyParser.json());
 app.get('/', index.index);
 
 app.get('/test', function(req, res) {
@@ -17,7 +18,7 @@ app.get('/test', function(req, res) {
 });
 
 
-app.post('/register', express.bodyParser(),register.register_user);
+app.post('/register', register.register_user);
 
 
 app.use(express.static(__dirname + '/'));
