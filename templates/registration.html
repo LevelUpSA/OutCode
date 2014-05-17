@@ -8,8 +8,9 @@
 
   </div>
 
+  {{message}}
+
   <article class="container" id="latest-article">	
-  	
   	<table class="register" id="reg">
   		<tr>
   			<td ><label>Name :</label></td>
@@ -18,7 +19,7 @@
   		<!--  -->
   		<tr>
   			<td > <label>Username :</label></td>
-  			<td > <input type="text" title="6 to 10 characters [eg. Outcoder451]"></td>
+  			<td > <input ng-model="user.name" type="text" title="6 to 10 characters [eg. Outcoder451]"></td>
   		</tr>
   		<!--  -->
   		<tr>
@@ -71,7 +72,7 @@
 
   		<tr >
   			<td></td>
-  			<td><input padding-right="90px" type="submit" value="Register"> 
+  			<td><input padding-right="90px" type="submit" ng-click="button_click()" value="Register"> 
   			</td>
   		</tr>
 
