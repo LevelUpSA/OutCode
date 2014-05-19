@@ -14,22 +14,22 @@
   	<table class="register" id="reg">
   		<tr>
   			<td ><label>Name :</label></td>
-  			<td ><input type="text" title="your first name [eg. John]"></td>
+  			<td ><input ng-model="user.name" type="text" title="your first name [eg. John]"></td>
   		</tr>	
   		<!--  -->
   		<tr>
   			<td > <label>Username :</label></td>
-  			<td > <input ng-model="user.name" type="text" title="6 to 10 characters [eg. Outcoder451]"></td>
+  			<td > <input ng-model="user.username" type="text" title="6 to 10 characters [eg. Outcoder451]"></td>
   		</tr>
   		<!--  -->
   		<tr>
   			<td ><label>Password :</label></td>
-  			<td ><input type="password" title="8 to 12 characters [eg. Xkgflgk%^$12]"></td>
+  			<td ><input ng-model="user.Password type="password" title="8 to 12 characters [eg. Xkgflgk%^$12]"></td>
   		</tr>
   		<!--  -->
   		<tr>
   			<td ><label>Confirm Password :</label></td>
-  			<td ><input type="password" title="repeat the password above."></td>
+  			<td ><input ng-model="user.confirm_passwoed" type="password" title="repeat the password above."></td>
   		</tr>
 
   		<!--  -->

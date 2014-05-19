@@ -1,6 +1,8 @@
-var mongo = require('mongoose');
+var mongo = require('mongodb');
 
 function register_user(request, response) {
+
+
 	console.log(request.body);
 };
 
