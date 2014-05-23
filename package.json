@@ -6,7 +6,9 @@
     "dependencies": {
         "express": "latest",
         "bower": "latest",
-        "protractor": "latest"
+        "protractor": "latest",
+        "mongodb": "latest",
+        "body-parser": "latest"
     },
     "author": "tD"
 }

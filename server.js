@@ -1,11 +1,13 @@
 // Required files for the web server
 var index = require('./server/index')
+var register = require('./server/registration')
 
-
+var bodyParser = require('body-parser');
 var express = require('express');
 var app = express();
 
 
+app.use(bodyParser.json());
 app.get('/', index.index);
 
 app.get('/test', function(req, res) {
@@ -15,6 +17,8 @@ app.get('/test', function(req, res) {
 	res.send(parsed_json)
 });
 
+
+app.post('/register', register.register_user);
 
 
 app.use(express.static(__dirname + '/'));
