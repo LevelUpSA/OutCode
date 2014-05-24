@@ -2,12 +2,13 @@ var mongo = require('./mongoController');
 var MongoController = require('./mongoController');
 
 
-function register_user(request, response) {
+function project_create(request, response) {
 
 	mongo.add_document('users', request.body, success, error);
 	console.log(request.body);
-	response.send('Thanx for Registering');
+	response.send('Project Added');
 };
+
 function success(message) {
 
 }
@@ -16,4 +17,4 @@ function error(error_message) {
 
 }
 
-module.exports.register_user = register_user
+module.exports.project_create= project_create

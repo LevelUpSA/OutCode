@@ -8,14 +8,11 @@ angular.module('outcode')
     username: "",
     password: "",
     passwordConfirm: "",
-<<<<<<< HEAD
-    email: "" ,
-=======
     email: "",
     typeofuser: "",
     organisationname: "",
     organisationdescription: "" 
->>>>>>> 7b3413e10a299331f2a81740fd676c6faa2d18ba
+
   };
 
   $scope.user = user;
@@ -33,14 +30,7 @@ angular.module('outcode')
   	.success(function(data) {
   		$scope.message = data.name;
       user.name = data.name;
-<<<<<<< HEAD
-      
-=======
-      //user.username=data.username;
-      //user.password=data.password;
-      //user.passwordConfirm=data.passwordConfirm;
-    // user.email=data.email;
->>>>>>> 7b3413e10a299331f2a81740fd676c6faa2d18ba
+
   	});
   };
 
