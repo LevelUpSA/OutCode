@@ -5,7 +5,7 @@ var connection_string = 'mongodb://127.0.0.1:27017/outCode';
 function add_document (collection_name, document, success, error) {
 
   MongoClient.connect(connection_string, function(err, db) {
-    if(err) throw err;
+    if(err) throw console.log(err);
 
     var collection = db.collection(collection_name);
     collection.insert(document, function(err, docs) {
@@ -20,19 +20,26 @@ function add_document (collection_name, document, success, error) {
 
 function find_document (collection_name, document, success, error) {
 
-  MongoClient.connect(connection_string, function(err, db) {
-    if(err) throw err;
+  var MongoClient = require('mongodb').MongoClient;
+  var format = require('util').format;
 
-    var collection = db.collection(collection_name);
-    collection.find(document, function(err, docs) {
-        if (err) {
-        	error(err);
+  MongoClient.connect(connection_string, function(err, db){
+    if(err){ error(err); }
+
+    var result= null;
+    var collections = db
+      .collection(collection_name)
+      .find(document)
+      .limit(1)
+      .toArray( function(err, docs){
+        console.dir(docs);
+        if(err){ 
+          error(err);
         } else {
-    		success(docs);
-    	}
+          success(docs);
+        }
       });
-    db.close();
-    });
+  });
   };
     
 module.exports.find_document = find_document;

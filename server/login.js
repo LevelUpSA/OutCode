@@ -2,10 +2,15 @@ var mongo = require('./mongoController');
 
 function login_user(request, response) {
 
-	mongo.find_document('users', request.body, function(data) {
-		request.session.generate(function(err) {
+	mongo.find_document('user's, request.body, function(data) {
+		console.log("Logging in the data");
+		console.log(data);
+
+		request.session.username = request.body.username;
+		request.session.save(function(err) {
 			response.send(err);
 		});
+
 	}, function(error) {
 		response.send(error);
 	});

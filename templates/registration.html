@@ -50,11 +50,11 @@
 
   		<!--  -->
   		<tr class="hiddenColumn" id="Organised" ng-show="isorganisation">
-        <td class="left"><label>Organisation Name :</label><br/></td><td><input type="text" title="Give us the name of your organisation [eg. Outcode]" name="OrganisationName"></td>
+        <td class="left"><label>Organisation Name :</label><br/></td><td><input type="text" ng-model="user.organisationname" title="Give us the name of your organisation [eg. Outcode]" name="OrganisationName"></td>
   		</tr>	
 
   		<tr class="hiddenColumn" id="Organised" ng-show="isorganisation">
-        <td class="left"><label>Organisation Description :</label><br/></td><td><textarea  title="A brief sentence on what your Organisation is about." name="OrganisationDescrption"/></td>
+        <td class="left"><label>Organisation Description :</label><br/></td><td><textarea  title="A brief sentence on what your Organisation is about." ng-model="user.organisationdescription" name="OrganisationDescrption"/></td>
   		</tr>
   		<!--  -->
 
