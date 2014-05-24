@@ -8,14 +8,28 @@ describe('Should register a Volunteer',function(){
 	});
 
 	it('get a response from the db', function() {
-		element(by.input('user.name')).sendKeys('Gab');
-		element(by.input('user.username')).sendKeys('Gab');
-		element(by.input('user.password')).sendKeys('Gab');
-		element(by.input('user.confirm')).sendKeys('Gab');
-		element(by.input('user.email')).sendKeys('Gab');
+		element(by.input('user.name')).sendKeys('CustomerName');
+		//expect(element(by.binding('user.name')).getText()).toEqual('CustomerName');
+
+		element(by.input('user.username')).sendKeys('Gabriel');
+		//expect(element(by.binding('user.username')).getText()).toEqual('Gabriel');
+
+		element(by.input('user.password')).sendKeys('12345678');
+		//expect(element(by.binding('user.password')).getText()).toEqual('12345678');
+
+		element(by.input('user.confirm')).sendKeys('12345678');
+		element(by.input('user.email')).sendKeys('Gab@gmail.com');
+		//expect(element(by.binding('user.email')).getText()).toEqual('Gab@gmail.com');
+
 		element(by.select("selectedAction.UserStatus"));
 		element(by.select("selectedAction.AgreeStatus"));
+		
 		var elem = ptor.findElement(protractor.By.id('registration'));
 		elem.click();
+		//expect(element(by.binding('user.email')).getText()).toEqual('Gab@gmail.com');
+
+		//expect(element(by.input('user.confirm')).getText()).toEqual('12345678');
+
+		
   });
 });
