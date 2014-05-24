@@ -2,7 +2,7 @@ var mongo = require('./mongoController');
 
 function login_user(request, response) {
 
-	mongo.find_document('user's, request.body, function(data) {
+	mongo.find_document('users', request.body, function(data) {
 		console.log("Logging in the data");
 		console.log(data);
 
