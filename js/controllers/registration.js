@@ -8,12 +8,23 @@ angular.module('outcode')
     username: "",
     password: "",
     passwordConfirm: "",
-    email: "makume@gmail.com"
+    email: "",
+    typeofuser: "",
+    organisationname: "",
+    organisationdescription: "" 
   };
 
   $scope.user = user;
+  $scope.useraccept = false;
+  $scope.isorganisation = false;
 
   $scope.button_click = function() {
+    if ($scope.useraccept==false) {
+      $scope.message = "Agree to terms before submitting";
+      return;
+    }
+    $scope.message = null;
+    
   	$http.post('/register', user)
   	.success(function(data) {
   		$scope.message = data.name;
@@ -21,7 +32,7 @@ angular.module('outcode')
       //user.username=data.username;
       //user.password=data.password;
       //user.passwordConfirm=data.passwordConfirm;
-    //  user.email=data.email;
+    // user.email=data.email;
   	});
   };
 

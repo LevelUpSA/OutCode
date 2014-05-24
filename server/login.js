@@ -6,17 +6,11 @@ function login_user(request, response) {
 		request.session.generate(function(err) {
 			response.send(err);
 		});
-	}, error);
+	}, function(error) {
+		response.send(error);
+	});
 	//console.log(request.body);
 	response.send('Thanx for login');
 };
-
-function success(message) {
-
-}
-
-function error(error_message) {
-
-}
 
 module.exports.login_user = login_user

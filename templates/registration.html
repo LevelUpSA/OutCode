@@ -14,11 +14,7 @@
   	<table class="register" id="reg">
   		<tr>
   			<td ><label>Name :</label></td>
-<<<<<<< Updated upstream
   			<td ><input ng-model="user.name" type="text" title="your first name [eg. John]"></td>
-=======
-  			<td ><input ng-model ="user.name" type="text" title="your first name [eg. John]"></td>
->>>>>>> Stashed changes
   		</tr>	
   		<!--  -->
   		<tr>
@@ -39,27 +35,26 @@
   		<!--  -->
   		<tr>
   			<td > <label> e-mail Addresss: </label></td>
-<<<<<<< Updated upstream
   			<td ><input ng-model="user.email" type="text" title="your current e-mail address [eg. me@somewhere.com]"></td>
-=======
-  			<td ><input  ng-model="user.email" type="text" title="your current e-maila address [eg. me@somewhere.com]"></td>
->>>>>>> Stashed changes
+
   		</tr>	
   		<!--  -->
   		<tr>
   			<td > <label> Type of User : </label></td>
   			<td>
-  				<input type="radio" name="clicked" value="Volunteer" title="If you are just volunteering to take part">1. Volunteer.<br>
-  				<input type="radio" name="clicked" value="Organiser" title="If you have a product that you would like for us to recruit for and advertise for your NGO/NPO.">2. Organiser.</a><br>
+  				<input type="radio" ng-model="isorganisation" ng-value="false" name="clicked" value="Volunteer" title="If you are just volunteering to take part">1. Volunteer.<br>
+  				<input type="radio" ng-model="isorganisation" ng-value="true" name="clicked" value="Organiser" title="If you have a product that you would like for us to recruit for and advertise for your NGO/NPO.">2. Organiser.</a><br>
   			</td>
   			
   		</tr>
 
   		<!--  -->
-  		<tr class="hiddenColumn" id="Organised">
+  		<tr class="hiddenColumn" id="Organised" ng-show="isorganisation">
+        <td class="left"><label>Organisation Name :</label><br/></td><td><input type="text" title="Give us the name of your organisation [eg. Outcode]" name="OrganisationName"></td>
   		</tr>	
 
-  		<tr class="hiddenColumn" id="Organised">
+  		<tr class="hiddenColumn" id="Organised" ng-show="isorganisation">
+        <td class="left"><label>Organisation Description :</label><br/></td><td><textarea  title="A brief sentence on what your Organisation is about." name="OrganisationDescrption"/></td>
   		</tr>
   		<!--  -->
 
@@ -73,8 +68,8 @@
 
   			</td>	
   			<td>
-  				<input type="radio" name="clicked" value="No" title="I Don't Agree">No 
-  				<input type="radio" name="clicked" value="Yes" title="I Agree"> Yes</a><br>
+  				<input type="radio" name="accept" value="No" title="I Don't Agree" ng-model="useraccept" ng-value="false">No 
+  				<input type="radio" name="accept" value="Yes" title="I Agree" ng-model="useraccept" ng-value=true> Yes</a><br>
   			</td>
   		</tr>
 
@@ -90,25 +85,6 @@
   <script type="text/Javascript">
 
  // alert('jQuery ' + jQuery.fn.jquery);
- 
- $('.hiddenColumn').hide();
-
- $('input[type=radio]').click(function() {
- 	var $nextTR = $(this).closest('tr').next('tr');
- 	var $nextTRQ = $(this).closest('tr').next('tr').next('tr');
- 	
- 	if (this.value == 'Organiser') {
- 		$nextTR
- 		.html('<td class="left"><label>Organisation Name :</label><br/></td><td><input type="text" title="Give us the name of your organisation [eg. Outcode]" name="OrganisationName"></td>').show(500);
- 		$nextTRQ
- 		.html('<td class="left"><label>Organisation Description :</label><br/></td><td><textarea  title="A brief sentence on what your Organisation is about." name="OrganisationDescrption"/></td>').show(450);
-
- 	} 
- 	else if (this.value == 'Volunteer') {
- 		$nextTR.hide(500);
- 		$nextTRQ.hide(450); 
- 	};
- });
 
 //var result_style = document.getElementById('Organised').style;
 //result_style.display = 'table-row';
