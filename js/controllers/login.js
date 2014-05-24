@@ -7,10 +7,14 @@ angular.module('outcode')
   	"password": ""
   };
 
-  $http.post('/login', $scope.user)
-  .success(function(data) {
+  $scope.login_click = function(){
+  	$http.post('/login', $scope.user)
+  		.success(function(data) {
+  		console.log(data);
+  	});
+  }
 
-  });
+  
 
 
 });
