@@ -20,7 +20,7 @@ angular.module('outcode', ['ngRoute'])
 
 .when('/newProject', {
     templateUrl: 'templates/create_project.html',
-    controller: "createController"
+    controller: "createprojectController"
   })
 
   

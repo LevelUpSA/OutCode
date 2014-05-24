@@ -34,17 +34,17 @@
       </header>
 <div align="center"
 <p>
-Project Name :<input type="text" name="textwrite" size="35" required>
+Project Name :<input  type="text" name="projectname" ng-model="project.name" size="35" required >
 </p>
 
 <p>
 Project Description :<br>
-<textarea rows="30" cols="80" name="project_description" required>
+<textarea  rows="40" cols="80" name="project_description"ng-model="project.description" required>
 </textarea> 
 </p>
 
 <div>
-<input type="submit" value="Create" >
+<input type="submit" ng-click="button_click()" value="Create" >
 </div>
 </form>
 </body>

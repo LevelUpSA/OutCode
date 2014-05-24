@@ -8,7 +8,7 @@ angular.module('outcode')
     username: "",
     password: "",
     passwordConfirm: "",
-    email: "makume@gmail.com"
+    email: "" ,
   };
 
   $scope.user = user;
@@ -18,10 +18,7 @@ angular.module('outcode')
   	.success(function(data) {
   		$scope.message = data.name;
       user.name = data.name;
-      //user.username=data.username;
-      //user.password=data.password;
-      //user.passwordConfirm=data.passwordConfirm;
-    //  user.email=data.email;
+      
   	});
   };
 
