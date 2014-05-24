@@ -1,26 +1,18 @@
 <table class="login">
       <tr>
         <td> <label for"textbox" > User-name :</label> </td>        
-        <td> <input ng-model="username" type ="text" id ="textbox"> </td>
+        <td> <input ng-model="user.username" type ="text" id ="textbox"> </td>
     
       </tr>
 
           <tr>
         <td> <label for"textbox" > Password :</label> </td>
-        <td> <input ng-model="password" type ="Password" id ="textbox"></td>
+        <td> <input ng-model="user.password" type ="Password" id ="textbox"></td>
         </tr>
-
-        <tr>
-        <td>username - {{username}} </td>
-        <td>password - {{password}}</td>
-        </tr>
-
         
-        
-
         <tr>
         <td> </td>
-        <td> <button type = "submit">Login </button> </td>
+        <td> <button type = "submit" ng-click="button_click()">Login </button> </td>
         </tr>
       <tr><td> </td>
       <td>

@@ -4,7 +4,7 @@ angular.module('outcode')
   $scope.title = "registration";
 
   var user = { 	
-    name: "Lebo",
+    name: "",
     username: "",
     password: "",
     passwordConfirm: "",
@@ -17,6 +17,11 @@ angular.module('outcode')
   	$http.post('/register', user)
   	.success(function(data) {
   		$scope.message = data.name;
+      user.name = data.name;
+      //user.username=data.username;
+      //user.password=data.password;
+      //user.passwordConfirm=data.passwordConfirm;
+    //  user.email=data.email;
   	});
   };
 
