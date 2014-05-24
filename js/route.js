@@ -4,7 +4,7 @@ angular.module('outcode', ['ngRoute'])
 
   $routeProvider
   .when('/index', {
-    templateUrl: 'templates/index.html',
+      templateUrl: 'templates/index.html',
     controller: "indexController"
   })
 
@@ -17,6 +17,22 @@ angular.module('outcode', ['ngRoute'])
     templateUrl: 'templates/registration.html',
     controller: "registrationController"
   })
+
+.when('/newProject', {
+    templateUrl: 'templates/create_project.html',
+    controller: "createController"
+  })
+
+  
+.when('/forgotPassword', {
+    templateUrl: 'templates/forgot_Password.html',
+    controller: "forgotPasswordController"
+  })  
+
+  .when('/contact', {
+    templateUrl: 'templates/contact.html',
+    controller: "contactController"
+  }) 
 
   .otherwise({
     redirectTo: '/index'

@@ -8,7 +8,9 @@
         "bower": "latest",
         "protractor": "latest",
         "mongodb": "latest",
-        "body-parser": "latest"
+        "body-parser": "latest",
+        "express-session": "latest",
+        "cookie-parser": "latest"
     },
     "author": "tD"
 }
